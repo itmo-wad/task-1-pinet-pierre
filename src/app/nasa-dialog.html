@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>{{data.title}}</h1>
+<div mat-dialog-content style="
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content:space-between;">
+    <img [src]="data.image" style="max-width: 400px; max-height: 400px;">
+    <p style="margin: 5px; max-width: 400px;">{{data.description}}</p>
+</div>
+<div mat-dialog-actions style="display: flexbox;">
+    <button style="
+    background-color:white;
+    color:black;
+    border: 1px solid black;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    float: right;
+    " (click)="onClose()">Close</button>
+</div>

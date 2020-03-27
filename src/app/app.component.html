@@ -1,6 +1,6 @@
 <div class="content">
   <div *ngFor="let image of images" class="square-image-container">
-    <div [ngStyle]="{'background-image': toUrl(image.links[0].href)}" class="square-image"> 
+    <div (click)="openDialog(image.data[0].title, image.data[0].description, image.links[0].href)" [ngStyle]="{'background-image': toUrl(image.links[0].href)}" class="square-image"> 
       <div class="image-shadow">
         <span>{{ image.data[0].title }}</span>
       </div>
