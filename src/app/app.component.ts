@@ -14,8 +14,12 @@ export class AppComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
 
+  toUrl(x: string) {
+    return "url(" + x + ")"
+  }
+
   ngOnInit() {
-    this.http.get("https://images-api.nasa.gov/search?q=apollo%2011&description=moon%20landing&media_type=image")
+    this.http.get("https://images-api.nasa.gov/search?q=mars&description=surface&media_type=image")
     .subscribe((x: NasaResponse) => this.images = x.collection.items.slice(0, 40))
     
   }
